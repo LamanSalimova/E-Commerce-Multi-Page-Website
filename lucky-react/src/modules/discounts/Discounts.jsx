@@ -15,12 +15,6 @@ import Footer from "../../components/footer/Footer";
 
 export default function ProductList() {
   const context = useContext(ProductContext);
-  // console.log(context);
-
-  const [click, setClick] = useState(false);
-  const handleClick = () => {
-    setClick(!click);
-  };
 
   const [searchTerm, setSearchTerm] = useState("");
   return (
@@ -73,7 +67,6 @@ export default function ProductList() {
               .map((book) => (
                 <Stack
                   maxW={["90%", "95%", "95%"]}
-                  //   height="430px"
                   p={3}
                   mb={7}
                   key={book.id}
@@ -102,7 +95,6 @@ export default function ProductList() {
                       }}
                       width="70%"
                       height="100%"
-                      //   object-fit="cover"
                     />
                   </Flex>
                   <Text
@@ -135,20 +127,6 @@ export default function ProductList() {
                     >
                       Səbətə at
                     </Button>
-                  </Box>
-                  <Box
-                    position="absolute"
-                    top={5}
-                    right={5}
-                    cursor="pointer"
-                    pb={3}
-                    onClick={handleClick}
-                  >
-                    {click ? (
-                      <Img src="https://los.az/lucky/images/icon/heart-filled.svg" />
-                    ) : (
-                      <Img src="https://los.az/lucky/images/icon/heart-outline.svg" />
-                    )}
                   </Box>
                   <Box position="absolute" top={5} left={5}>
                     <Box

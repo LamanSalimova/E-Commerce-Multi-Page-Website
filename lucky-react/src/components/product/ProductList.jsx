@@ -1,7 +1,6 @@
 import { Box, Img, Text, Button, Stack, Container } from "@chakra-ui/react";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ProductContext } from "../../App";
-// import leafLeftImg from "../../assets/images/leaf/leaf-office-left-1.png";
 import leafRightImg from "../../assets/images/leaf/leaf-office-right-1.png";
 
 import Slider from "react-slick";
@@ -10,12 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function ProductList() {
   const context = useContext(ProductContext);
-  // console.log(context);
-
-  const [click, setClick] = useState(false);
-  const handleClick = () => {
-    setClick(!click);
-  };
 
   var settings = {
     // dots: true,
@@ -97,7 +90,6 @@ export default function ProductList() {
               background="#FFF"
               padding="30px"
               overflow="hidden"
-              position="relative"
             >
               <Box width="full" height="50%">
                 <Img
@@ -142,19 +134,6 @@ export default function ProductList() {
                 >
                   Səbətə at
                 </Button>
-              </Box>
-              <Box
-                position="absolute"
-                top={5}
-                right={5}
-                cursor="pointer"
-                onClick={handleClick}
-              >
-                {click ? (
-                  <Img src="https://los.az/lucky/images/icon/heart-filled.svg" />
-                ) : (
-                  <Img src="https://los.az/lucky/images/icon/heart-outline.svg" />
-                )}
               </Box>
             </Stack>
           ))}

@@ -15,23 +15,8 @@ import Footer from "../../components/footer/Footer";
 
 export default function New() {
   const context = useContext(ProductContext);
-  // console.log(context);
-
-  const [click, setClick] = useState(false);
-  const handleClick = () => {
-    setClick(!click);
-  };
 
   const [searchTerm, setSearchTerm] = useState("");
-
-  // const [filter, setFilter] = useState(context.state.productList);
-
-  // const filterResult = (item) => {
-  //   const result = context.state.productList.filter((curData) => {
-  //     return curData.category === item;
-  //   });
-  //   setFilter(result);
-  // };
 
   return (
     <>
@@ -112,7 +97,6 @@ export default function New() {
                       }}
                       width="70%"
                       height="100%"
-                      //   object-fit="cover"
                     />
                   </Flex>
                   <Text
@@ -145,20 +129,6 @@ export default function New() {
                     >
                       Səbətə at
                     </Button>
-                  </Box>
-                  <Box
-                    position="absolute"
-                    top={5}
-                    right={5}
-                    cursor="pointer"
-                    pb={3}
-                    onClick={handleClick}
-                  >
-                    {click ? (
-                      <Img src="https://los.az/lucky/images/icon/heart-filled.svg" />
-                    ) : (
-                      <Img src="https://los.az/lucky/images/icon/heart-outline.svg" />
-                    )}
                   </Box>
                   <Box position="absolute" top={5} left={5}>
                     <Box

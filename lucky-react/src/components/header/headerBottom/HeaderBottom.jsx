@@ -39,24 +39,6 @@ export default function HeaderBottom() {
             <MenuButton righticon={<BsChevronDown color="#fff" />}>
               Kateqoriyalar
             </MenuButton>
-            <MenuList>
-              <MenuItem
-                minH="48px"
-                color="#000"
-                // onClick={() => filterResult("ofis ləvazimatları")}
-              >
-                <Link>ofis ləvazimatları</Link>
-              </MenuItem>
-              <MenuItem minH="40px" color="#000">
-                <Link>dibçək gülləri</Link>
-              </MenuItem>
-              {/* <MenuItem minH="40px" color="#000">
-                <Link>Geri qaytarılma və dəyişdirilmə</Link>
-              </MenuItem>
-              <MenuItem minH="40px" color="#000">
-                <Link>Geri qaytarılma və dəyişdirilmə</Link>
-              </MenuItem> */}
-            </MenuList>
           </Menu>
         </Flex>
         <Flex>
